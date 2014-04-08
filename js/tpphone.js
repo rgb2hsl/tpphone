@@ -5,11 +5,14 @@
 (function ( $ ) {
 
     function getISOCode(phone){
-        var ru = /^\+7[34589]\d*/;
-        var rue = /^8[34589]\d*/;
-        var ua = /^\+380\d*/;
-        var us = /^\+1\d*/;
-        var free = /^[\+\d][\d]{10,}[\-\+\*#\s\(\)]+.*/;
+
+        console.log(phone);
+
+        var ru = /^\+7\D*[34589]\d*$/;
+        var rue = /^8\D*[34589]\d*$/;
+        var ua = /^\+380\D*\d*$/;
+        var us = /^\+1\D*\d*$/;
+        var free = /^[\+\d][\d]{9,}[\-\+\*#\s\(\)]+.*$/;
 
         //паттерн free уникальный в своём роде т.к. пересекается с другими и является проприаритарным
         if (phone.search(free) != -1) {
@@ -45,7 +48,7 @@
         } else if (ISOCode === "us") {
             mask = "+0 000 000-00-00bp";
         }
-
+        console.log(ISOCode);
         return mask;
     }
 
