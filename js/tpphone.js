@@ -6,8 +6,6 @@
 
     function getISOCode(phone){
 
-        console.log(phone);
-
         var ru = /^\+7\D*[34589]\d*$/;
         var rue = /^8\D*[34589]\d*$/;
         var ua = /^\+380\D*\d*$/;
@@ -48,7 +46,7 @@
         } else if (ISOCode === "us") {
             mask = "+0 000 000-00-00bp";
         }
-        console.log(ISOCode);
+       
         return mask;
     }
 
