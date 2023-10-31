@@ -1,5 +1,5 @@
 /**
- * @author ru-web-designer
+ * @author rgb2hsl
  */
 
 (function ( $ ) {
